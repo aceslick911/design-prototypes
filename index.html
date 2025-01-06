@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipped Mimic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #0f1533;
+      }
+
+      #responsiveFlippedV9Page {
+        background: #fff;
+
+        display: flex;
+        width: 1263px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #testHeader {
+        background: #0f1533;
+
+        display: flex;
+        height: 102px;
+        padding: 0px 91.5px;
+        justify-content: center;
+        align-items: flex-start;
+        align-self: stretch;
+      }
+
+      #logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-self: stretch;
+      }
+
+      #navContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1 0 0;
+        align-self: stretch;
+      }
+
+      #callToAction {
+        display: flex;
+        height: 62px;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 19px;
+      }
+
+      #phoneContainer {
+        display: flex;
+        width: 95px;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #phoneLogo {
+        display: flex;
+        width: 17px;
+        height: 12px;
+        padding-right: 3px;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      #phoneNumber {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 31px; /* 258.333% */
+        text-transform: uppercase;
+      }
+
+      #accountLinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #accountDetails {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 31px; /* 193.75% */
+        text-transform: uppercase;
+      }
+
+      #navLinks {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        flex: 1 0 0;
+      }
+
+      #aboutUsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #homeContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #businessContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #contactUsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #aboutUsLink {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 250% */
+      }
+
+      #homeLink {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 250% */
+      }
+
+      #businessLink {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 250% */
+      }
+
+      #contactUsLink {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 250% */
+      }
+
+      #contentContainer {
+        background: #fff;
+
+        display: flex;
+        padding: 0px 171.5px 200px 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+      }
+
+      #headerMain {
+        display: flex;
+        padding-top: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #headingDescription {
+        align-self: stretch;
+
+        color: #000;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      #companyHeading {
+        align-self: stretch;
+
+        color: #000;
+        font-family: Poppins;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 100% */
+      }
+
+      #flippedDiscription {
+        align-self: stretch;
+
+        color: #000;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 150% */
+      }
+
+      #contactDirection {
+        align-self: stretch;
+
+        color: #000;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 150% */
+      }
+
+      #contactContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-self: stretch;
+      }
+
+      #emailContact {
+        /* background: lightgray 50% / cover no-repeat; */
+
+        width: 200px;
+        height: 30px;
+      }
+
+      #footerCurve {
+        fill: #0f1533;
+
+        height: 141px;
+        align-self: stretch;
+      }
+
+      #footerContainer {
+        background: #0f1533;
+
+        display: flex;
+        height: 292px;
+        padding: 0px 52px 103px 52px;
+        justify-content: center;
+        align-items: flex-end;
+        align-self: stretch;
+      }
+
+      #footerNav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+        align-self: stretch;
+      }
+
+      #faq {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #privacy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #contactUs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #complaints {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #career {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #press {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #legal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #accessibility {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 131.25% */
+      }
+
+      #footerRHContainer {
+        display: flex;
+        height: 111px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex: 1 0 0;
+      }
+
+      #footerLogoContainer {
+        display: flex;
+        width: 293px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1 0 0;
+      }
+
+      #footerLogo {
+        display: flex;
+        height: 56px;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #socialContainer {
+        display: flex;
+        height: 33px;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #socialLinks {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+      }
+
+      #facebook {
+        fill: #fff;
+
+        width: 31.398px;
+        height: 31px;
+      }
+
+      #instagram {
+        fill: #fff;
+
+        width: 31.398px;
+        height: 31px;
+      }
+
+      #twitter {
+        fill: #fff;
+
+        width: 31.398px;
+        height: 31px;
+      }
+
+      #copyrightContainer {
+        display: flex;
+        height: 22px;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      #copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        color: #fff;
+        text-align: right;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 150% */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="responsiveFlippedV9Page">
+      <div id="testHeader">
+        <div id="logoContainer">
+          <svg
+            color1="#28D2CF"
+            color2="#FFFFFF"
+            class="DefaultheaderDefault-sc-9glh00-4 kpKJiN"
+            width="170"
+            height="67"
+            viewBox="0 0 170 67"
+            fill="var(--color-1, #28D2CF)"
+          >
+            <path
+              d="M35.8364 0.86742H28.3271V41.7454H35.8364V0.86742ZM46.273 13.9666H38.7637V41.7454H46.273V13.9666ZM37.8595 5.43216C37.8595 7.91675 39.949 10.0055 42.4898 10.0055C45.0869 10.0055 47.1194 7.91675 47.1194 5.43216C47.1194 2.83512 45.0869 0.745605 42.4898 0.745605C39.949 0.745605 37.8595 2.83512 37.8595 5.43216ZM56.7087 52.4732V39.0351C58.0635 40.899 60.887 42.4232 64.7263 42.4232C72.5744 42.4232 77.8255 36.2124 77.8255 27.7998C77.8255 19.5566 73.139 13.3459 65.009 13.3459C60.8307 13.3459 57.7254 15.2089 56.4831 17.3546V13.9666H49.1995V52.4732H56.7087ZM70.4287 27.856C70.4287 32.8244 67.3804 35.7041 63.5402 35.7041C59.7009 35.7041 56.5955 32.7682 56.5955 27.856C56.5955 22.9438 59.7009 20.0641 63.5402 20.0641C67.3804 20.0641 70.4287 22.9438 70.4287 27.856ZM87.8755 52.4732V39.0351C89.2303 40.899 92.0537 42.4232 95.8931 42.4232C103.741 42.4232 108.992 36.2124 108.992 27.7998C108.992 19.5566 104.306 13.3459 96.175 13.3459C91.9968 13.3459 88.8914 15.2089 87.6499 17.3546V13.9666H80.3663V52.4732H87.8755ZM101.596 27.856C101.596 32.8244 98.5464 35.7041 94.707 35.7041C90.8677 35.7041 87.7623 32.7682 87.7623 27.856C87.7623 22.9438 90.8677 20.0641 94.707 20.0641C98.5464 20.0641 101.596 22.9438 101.596 27.856ZM118.694 24.6944C118.864 22.1536 121.009 19.2177 124.906 19.2177C129.196 19.2177 131.003 21.928 131.116 24.6944H118.694ZM131.85 31.9218C130.947 34.4056 129.027 36.1562 125.526 36.1562C121.8 36.1562 118.694 33.5022 118.525 29.8323H138.4C138.4 29.7191 138.512 28.59 138.512 27.5171C138.512 18.5961 133.374 13.1194 124.792 13.1194C117.678 13.1194 111.129 18.8788 111.129 27.7436C111.129 37.1159 117.848 42.5926 125.47 42.5926C132.302 42.5926 136.705 38.5838 138.117 33.7848L131.85 31.9218ZM169.218 0.86742H161.822V16.7331C161.031 15.2651 158.772 13.2889 153.973 13.2889C146.125 13.2889 140.649 19.669 140.649 27.7998C140.649 36.2124 146.295 42.4232 154.199 42.4232C157.926 42.4232 160.749 40.7295 161.991 38.5276C161.991 39.8261 162.16 41.1808 162.274 41.7454H169.444C169.331 40.6163 169.218 38.5838 169.218 36.7207V0.86742ZM148.215 27.7998C148.215 22.8314 151.263 20.0079 155.103 20.0079C158.942 20.0079 161.935 22.7744 161.935 27.7436C161.935 32.7682 158.942 35.7041 155.103 35.7041C151.151 35.7041 148.215 32.7682 148.215 27.7998Z"
+              fill="var(--color-1, #28D2CF)"
+            ></path>
+            <path
+              d="M17.4468 41.8126V25.6737H1.92005V18.5033H17.5031V8.06673H0V0.669945H25.295V41.8126H17.4468Z"
+              fill="var(--color-1, #28D2CF)"
+            ></path>
+            <path
+              d="M98.7189 53.2817C98.8212 51.9472 99.8995 50.5105 101.773 50.5105C103.825 50.5105 104.8 51.8192 104.852 53.2817H98.7189ZM105.185 56.5401C104.774 57.7722 103.85 58.7217 102.055 58.7217C100.207 58.7217 98.7189 57.3615 98.6416 55.4625H107.776C107.802 55.4118 107.854 55.001 107.854 54.513C107.854 50.562 105.596 48.0212 101.747 48.0212C98.5908 48.0212 95.665 50.6385 95.665 54.5903C95.665 58.824 98.6673 61.2875 102.055 61.2875C105.057 61.2875 107.032 59.5166 107.7 57.3357L105.185 56.5401ZM112.138 53.6924C112.138 52.0503 113.036 50.7416 114.73 50.7416C116.603 50.7416 117.296 51.973 117.296 53.5128V60.9025H120.273V52.9998C120.273 50.2536 118.81 48.047 115.757 48.047C114.371 48.047 112.882 48.6373 112.062 50.074V48.4061H109.162V60.9025H112.138V53.6924ZM124.429 53.2817C124.532 51.9472 125.609 50.5105 127.482 50.5105C129.535 50.5105 130.51 51.8192 130.562 53.2817H124.429ZM130.895 56.5401C130.485 57.7722 129.561 58.7217 127.765 58.7217C125.917 58.7217 124.429 57.3615 124.352 55.4625H133.487C133.513 55.4118 133.564 55.001 133.564 54.513C133.564 50.562 131.306 48.0212 127.456 48.0212C124.3 48.0212 121.375 50.6385 121.375 54.5903C121.375 58.824 124.378 61.2875 127.765 61.2875C130.767 61.2875 132.743 59.5166 133.41 57.3357L130.895 56.5401ZM142.698 48.3296C142.57 48.3039 142.262 48.2523 141.903 48.2523C140.261 48.2523 138.875 49.048 138.285 50.4074V48.4061H135.385V60.9025H138.362V54.9495C138.362 52.6148 139.414 51.2804 141.723 51.2804C142.031 51.2804 142.365 51.3062 142.698 51.3569V48.3296ZM143.135 61.5951C143.468 64.1102 145.777 66.163 149.088 66.163C153.783 66.163 155.502 63.0576 155.502 59.7219V48.4061H152.628V49.9975C152.089 48.9707 150.884 48.1758 148.933 48.1758C145.495 48.1758 143.16 50.9212 143.16 54.2569C143.16 57.7722 145.597 60.338 148.933 60.338C150.756 60.338 152.013 59.4916 152.552 58.5163V59.825C152.552 62.365 151.371 63.5714 149.01 63.5714C147.291 63.5714 146.086 62.4166 145.88 60.8768L143.135 61.5951ZM149.421 57.798C147.471 57.798 146.162 56.4378 146.162 54.2569C146.162 52.1268 147.522 50.7416 149.421 50.7416C151.269 50.7416 152.628 52.1268 152.628 54.2569C152.628 56.412 151.32 57.798 149.421 57.798ZM162.046 65.9576L170 48.4061H166.844L163.482 56.3097L159.89 48.4061H156.528L161.866 59.4143L158.864 65.9576H162.046Z"
+              fill="var(--color-2, white)"
+            ></path>
+          </svg>
+        </div>
+        <div id="navContainer">
+          <div id="callToAction">
+            <div id="phoneContainer">
+              <div id="phoneLogo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="12"
+                  viewBox="0 0 14 12"
+                  fill="none"
+                >
+                  <path
+                    d="M13.4833 9.25563L13.4081 9.87673C13.2568 10.567 12.2756 11.2573 10.9159 11.4649C9.55629 11.6714 6.83757 10.9816 4.34594 9.01454C1.85373 7.04692 0.834719 4.76956 0.53251 3.83764C0.268149 1.93974 1.70292 0.7662 1.70292 0.7662C2.11809 0.386195 2.64681 0.524572 3.1371 0.524572C3.62739 0.524572 3.77937 0.904045 3.77937 0.904045C3.77937 0.904045 4.57187 2.49166 4.79896 3.00897C5.02547 3.52682 4.7617 3.83764 4.7617 3.83764C4.7617 3.83764 4.30867 4.42414 4.00646 4.69983C3.70425 4.97552 3.93135 5.35553 3.93135 5.35553C5.70559 7.94425 7.78204 8.63453 8.31076 8.80697C8.83949 8.97941 9.02815 8.63453 9.02815 8.63453C9.02815 8.63453 9.55687 8.0129 9.97204 7.59937C10.3872 7.1853 10.7645 7.4264 10.7645 7.4264C10.7645 7.4264 12.4258 8.22047 13.0302 8.49616C13.6341 8.77238 13.4833 9.25563 13.4833 9.25563Z"
+                    fill="#28D2CF"
+                  />
+                </svg>
+              </div>
+              <p id="phoneNumber">1300 110 100</p>
+            </div>
+            <div id="accountLinks">
+              <p id="accountDetails">Login | My account</p>
+            </div>
+          </div>
+          <div id="navLinks">
+            <div id="aboutUsContainer"><p id="aboutUsLink">About us</p></div>
+            <div id="homeContainer">
+              <p id="homeLink">Home</p>
+            </div>
+            <div id="businessContainer"><p id="businessLink">Business</p></div>
+            <div id="contactUsContainer">
+              <p id="contactUsLink">Contact us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contentContainer">
+        <div id="headerMain">
+          <p id="headingDescription">About Flipped Energy Australia</p>
+        </div>
+        <p id="companyHeading">Flipped Energy Australia Pty Ltd</p>
+        <p id="flippedDiscription">
+          Filpped Energy Australia Pty Ltd is a retail energy provider that
+          offers electricity services to residential and business customers in
+          Australia. We are committed to providing our customers with affordable
+          and reliable energy solutions that help them save money and reduce
+          their carbon footprint. Our team of energy experts is dedicated to
+          delivering exceptional customer service and helping our customers make
+          informed decisions about their energy usage. We are passionate about
+          sustainability and are committed to supporting the transition to a
+          clean energy future.
+        </p>
+        <p id="contactDirection">
+          If you have any questions or concerns please reach out by email to:
+        </p>
+        <div id="contactContainer">
+          <p id="emailContact">
+            <img src="./assets/emailContactFinal.png" alt="email contact" />
+          </p>
+        </div>
+      </div>
+      <div id="footerCurve">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1263"
+          height="141"
+          viewBox="0 0 1263 141"
+          fill="none"
+        >
+          <path
+            d="M1263 35.8618C743.126 -55.8952 203.221 49.8802 0 114.238V141H1263V35.8618Z"
+            fill="#0F1533"
+          />
+        </svg>
+      </div>
+      <div id="footerContainer">
+        <div id="footerNav">
+          <div id="faq">FAQ</div>
+          <div id="privacy">Privacy</div>
+          <div id="contactUs">Contact us</div>
+          <div id="complaints">Complaints</div>
+          <div id="career">Careers</div>
+          <div id="press">Press</div>
+          <div id="legal">Legal</div>
+          <div id="accessibility">Accessibility</div>
+        </div>
+        <div id="footerRHContainer">
+          <div id="footerLogoContainer">
+            <div id="footerLogo">
+              <svg
+                color1="#28D2CF"
+                color2="#FFFFFF"
+                class="DarkfooterDefault-sc-9glh00-5 dujKQZ"
+                width="145"
+                height="56"
+                viewBox="0 0 145 56"
+                fill="var(--color-1, #28D2CF)"
+              >
+                <path
+                  d="M30.5666 0.168419H24.1616V35.0349H30.5666V0.168419ZM39.4684 11.3413H33.0634V35.0349H39.4684V11.3413ZM32.2922 4.06187C32.2922 6.18109 34.0744 7.96264 36.2416 7.96264C38.4567 7.96264 40.1903 6.18109 40.1903 4.06187C40.1903 1.84675 38.4567 0.0645218 36.2416 0.0645218C34.0744 0.0645218 32.2922 1.84675 32.2922 4.06187ZM48.3695 44.1851V32.7232C49.525 34.313 51.9332 35.613 55.208 35.613C61.9019 35.613 66.3808 30.3156 66.3808 23.1401C66.3808 16.1092 62.3835 10.8118 55.4491 10.8118C51.8853 10.8118 49.2366 12.4009 48.177 14.231V11.3413H41.9645V44.1851H48.3695ZM60.0718 23.1881C60.0718 27.4259 57.4717 29.8821 54.1963 29.8821C50.9216 29.8821 48.2729 27.3779 48.2729 23.1881C48.2729 18.9983 50.9216 16.5421 54.1963 16.5421C57.4717 16.5421 60.0718 18.9983 60.0718 23.1881ZM74.9529 44.1851V32.7232C76.1084 34.313 78.5167 35.613 81.7914 35.613C88.4854 35.613 92.9642 30.3156 92.9642 23.1401C92.9642 16.1092 88.9669 10.8118 82.0318 10.8118C78.4681 10.8118 75.8194 12.4009 74.7604 14.231V11.3413H68.5479V44.1851H74.9529ZM86.6552 23.1881C86.6552 27.4259 84.0545 29.8821 80.7797 29.8821C77.505 29.8821 74.8563 27.3779 74.8563 23.1881C74.8563 18.9983 77.505 16.5421 80.7797 16.5421C84.0545 16.5421 86.6552 18.9983 86.6552 23.1881ZM101.239 20.4915C101.384 18.3243 103.214 15.8201 106.537 15.8201C110.197 15.8201 111.738 18.1318 111.835 20.4915H101.239ZM112.461 26.656C111.69 28.7745 110.052 30.2677 107.067 30.2677C103.889 30.2677 101.239 28.0039 101.095 24.8737H118.047C118.047 24.7772 118.143 23.8141 118.143 22.899C118.143 15.29 113.761 10.6187 106.441 10.6187C100.373 10.6187 94.7864 15.5311 94.7864 23.0922C94.7864 31.0862 100.517 35.7575 107.019 35.7575C112.846 35.7575 116.602 32.3383 117.806 28.245L112.461 26.656ZM144.334 0.168419H138.025V13.7009C137.351 12.4488 135.424 10.7632 131.331 10.7632C124.637 10.7632 119.965 16.2051 119.965 23.1401C119.965 30.3156 124.781 35.613 131.523 35.613C134.702 35.613 137.109 34.1685 138.169 32.2903C138.169 33.3979 138.314 34.5534 138.41 35.0349H144.526C144.43 34.0719 144.334 32.3383 144.334 30.7492V0.168419ZM126.419 23.1401C126.419 18.9024 129.019 16.4941 132.294 16.4941C135.568 16.4941 138.121 18.8538 138.121 23.0922C138.121 27.3779 135.568 29.8821 132.294 29.8821C128.923 29.8821 126.419 27.3779 126.419 23.1401Z"
+                  fill="var(--color-1, #28D2CF)"
+                ></path>
+                <path
+                  d="M14.8811 35.0923V21.3267H1.63769V15.2108H14.9291V6.30903H0V3.8147e-06H21.5751V35.0923H14.8811Z"
+                  fill="var(--color-1, #28D2CF)"
+                ></path>
+                <path
+                  d="M84.2014 44.8747C84.2887 43.7365 85.2084 42.511 86.8062 42.511C88.5564 42.511 89.3882 43.6273 89.4322 44.8747H84.2014ZM89.7166 47.6539C89.3663 48.7049 88.5784 49.5147 87.0466 49.5147C85.4708 49.5147 84.2014 48.3545 84.1355 46.7348H91.927C91.949 46.6915 91.993 46.3412 91.993 45.925C91.993 42.555 90.0669 40.3878 86.7842 40.3878C84.0922 40.3878 81.5967 42.6203 81.5967 45.9909C81.5967 49.602 84.1574 51.7032 87.0466 51.7032C89.6073 51.7032 91.2923 50.1927 91.8617 48.3326L89.7166 47.6539ZM95.6473 45.225C95.6473 43.8244 96.4132 42.7082 97.8578 42.7082C99.4555 42.7082 100.047 43.7585 100.047 45.0718V51.3748H102.586V44.6343C102.586 42.2919 101.338 40.4098 98.7336 40.4098C97.5514 40.4098 96.282 40.9133 95.5821 42.1387V40.7162H93.1085V51.3748H95.6473V45.225ZM106.131 44.8747C106.218 43.7365 107.137 42.511 108.735 42.511C110.486 42.511 111.318 43.6273 111.362 44.8747H106.131ZM111.646 47.6539C111.296 48.7049 110.508 49.5147 108.976 49.5147C107.4 49.5147 106.131 48.3545 106.065 46.7348H113.856C113.878 46.6915 113.922 46.3412 113.922 45.925C113.922 42.555 111.996 40.3878 108.713 40.3878C106.021 40.3878 103.526 42.6203 103.526 45.9909C103.526 49.602 106.087 51.7032 108.976 51.7032C111.537 51.7032 113.222 50.1927 113.791 48.3326L111.646 47.6539ZM121.713 40.6509C121.604 40.6289 121.341 40.585 121.035 40.585C119.634 40.585 118.453 41.2636 117.949 42.4231V40.7162H115.476V51.3748H118.014V46.2973C118.014 44.3059 118.912 43.1677 120.881 43.1677C121.145 43.1677 121.429 43.1897 121.713 43.233V40.6509ZM122.086 51.9656C122.37 54.1108 124.339 55.8617 127.163 55.8617C131.168 55.8617 132.634 53.213 132.634 50.3679V40.7162H130.183V42.0735C129.723 41.1977 128.695 40.5197 127.031 40.5197C124.099 40.5197 122.107 42.8614 122.107 45.7065C122.107 48.7049 124.186 50.8933 127.031 50.8933C128.586 50.8933 129.658 50.1714 130.118 49.3395V50.4558C130.118 52.6223 129.111 53.6512 127.097 53.6512C125.631 53.6512 124.602 52.6662 124.427 51.3529L122.086 51.9656ZM127.448 48.7268C125.784 48.7268 124.668 47.5667 124.668 45.7065C124.668 43.8897 125.828 42.7082 127.448 42.7082C129.023 42.7082 130.183 43.8897 130.183 45.7065C130.183 47.5447 129.067 48.7268 127.448 48.7268ZM138.215 55.6865L145 40.7162H142.308L139.441 47.4574L136.377 40.7162H133.51L138.062 50.1055L135.501 55.6865H138.215Z"
+                  fill="var(--color-2, white)"
+                ></path>
+              </svg>
+            </div>
+            <div id="socialContainer">
+              <div id="socialLinks"></div>
+              <svg
+                id="facebook"
+                class="FB-sc-9glh00-27 fAvnnJ"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="var(--color-1, white)"
+              >
+                <path
+                  d="M17.4825 11.8275V13.8577H20.5001L20.3686 16.6385H17.4825V24.3618H14.5423V16.6385H12.4999V13.8577H14.5423V11.4826C14.5423 9.61624 15.7488 7.90205 18.5285 7.90205C19.6536 7.90205 20.4862 8.01016 20.4862 8.01016L20.4204 10.6071C20.4204 10.6071 19.5717 10.5987 18.6455 10.5987C17.643 10.5987 17.4825 11.0607 17.4825 11.8275ZM32.5 16.493C32.5 7.65685 25.3368 0.493042 16.5 0.493042C7.66325 0.493042 0.5 7.65685 0.5 16.493C0.5 25.3292 7.66325 32.493 16.5 32.493C25.3368 32.493 32.5 25.3298 32.5 16.493Z"
+                  fill="var(--color-1, white)"
+                ></path>
+              </svg>
+              <svg
+                id="instagram"
+                class="INST-sc-9glh00-28 faAYji"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="var(--color-1, white)"
+              >
+                <path
+                  d="M19.1883 16.488C19.1883 15.0046 17.9879 13.8014 16.5028 13.7953C15.0221 13.7886 13.805 15.0012 13.8011 16.4875C13.7966 17.9715 15.0082 19.1819 16.4967 19.1825C17.989 19.1825 19.1889 17.9815 19.1883 16.488ZM21.7574 12.173C21.7741 12.703 21.3489 13.1449 20.8089 13.1589C20.2783 13.1733 19.8342 12.7448 19.8242 12.2081C19.8141 11.6915 20.2416 11.2457 20.7609 11.2318C21.2948 11.2173 21.7412 11.6386 21.7574 12.1725M20.6311 16.5059C20.6289 18.7874 18.7703 20.6286 16.4727 20.6253C14.2051 20.6219 12.3639 18.7645 12.365 16.4819C12.3667 14.2043 14.2168 12.3547 16.49 12.3586C18.7932 12.3631 20.6333 14.2054 20.6311 16.5059ZM23.0837 19.3212C23.0932 17.4365 23.0926 15.5512 23.0837 13.6665C23.0815 13.1839 23.0514 12.7008 22.941 12.2271C22.732 11.3282 22.2444 10.6483 21.3929 10.2571C20.9292 10.0442 20.4327 9.95562 19.9278 9.93277C19.2691 9.90323 18.6093 9.88206 17.95 9.8815C16.5033 9.8815 15.0566 9.89153 13.6105 9.90658C13.1396 9.91159 12.6693 9.94224 12.2084 10.0531C11.1457 10.3084 10.434 10.9442 10.113 11.9975C9.95254 12.5236 9.92245 13.0686 9.91131 13.613C9.89124 14.5721 9.88344 15.5306 9.87062 16.4897H9.88511C9.88511 17.1701 9.87341 17.8506 9.88846 18.5305C9.90406 19.2421 9.88846 19.9576 10.0328 20.6604C10.2674 21.8028 10.9233 22.5663 12.0613 22.8911C12.5706 23.0366 13.0945 23.0739 13.6178 23.0767C15.5354 23.0862 17.4535 23.0879 19.3711 23.075C19.7952 23.0723 20.2243 23.0333 20.6406 22.9552C21.8125 22.7351 22.586 22.0563 22.907 20.8916C23.0491 20.3773 23.0809 19.8484 23.0837 19.3212ZM24.5371 14.1787C24.5471 15.7195 24.5476 17.2604 24.5371 18.8013C24.532 19.5174 24.5248 20.2357 24.3715 20.9412C23.9664 22.8087 22.8296 23.9555 20.9627 24.3579C20.5492 24.4471 20.1201 24.4794 19.6965 24.5034C19.1694 24.5329 18.6399 24.5323 18.1111 24.5334C16.7954 24.5373 15.4796 24.5474 14.1644 24.529C13.5353 24.5201 12.9005 24.4956 12.2792 24.4036C10.356 24.1194 9.03025 22.8661 8.63012 20.9975C8.49693 20.3773 8.47074 19.7464 8.46183 19.1161C8.44845 18.2396 8.45848 17.3624 8.45848 16.4852C8.45848 15.6081 8.44734 14.7309 8.46238 13.8543C8.47464 13.1137 8.50083 12.3714 8.71483 11.6531C9.20913 9.99295 10.3226 9.001 12 8.62428C12.6392 8.4805 13.2918 8.45821 13.9421 8.45487C15.6507 8.44484 17.3599 8.44317 19.0685 8.45487C19.8336 8.46044 20.601 8.48886 21.3433 8.71122C23.0079 9.21054 23.9982 10.3301 24.3682 12.0142C24.5248 12.7264 24.5332 13.4537 24.5376 14.1781M32.4994 16.493C32.4994 7.65685 25.3362 0.493042 16.5 0.493042C7.6638 0.493042 0.5 7.65629 0.5 16.493C0.5 25.3298 7.66325 32.493 16.5 32.493C25.3368 32.493 32.5 25.3298 32.5 16.493"
+                  fill="var(--color-1, white)"
+                ></path>
+              </svg>
+              <svg
+                id="twitter"
+                class="X-sc-9glh00-29 iPkkon"
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="var(--color-1, white)"
+              >
+                <path
+                  d="M22.1777 22.8911C21.4087 21.8747 20.6402 20.8588 19.8712 19.8428C18.4724 17.9943 17.0737 16.1464 15.675 14.2979C14.5827 12.8546 13.4899 11.4112 12.3988 9.96676C12.3654 9.92274 12.3308 9.90546 12.2762 9.90546C11.7836 9.90769 11.2915 9.90658 10.7994 9.90713C10.7743 9.90713 10.7493 9.90936 10.7114 9.91215C10.7353 9.94447 10.7509 9.96676 10.7677 9.9885C11.2915 10.6734 11.8159 11.3583 12.3397 12.0432C13.2135 13.1845 14.0873 14.3258 14.9605 15.4671C15.675 16.4005 16.3894 17.3345 17.1038 18.268C17.9035 19.3129 18.7032 20.3578 19.5023 21.4027C19.894 21.9148 20.2864 22.4269 20.6776 22.9396C20.7032 22.9731 20.7288 22.9903 20.7734 22.9898C21.2426 22.9876 21.7113 22.9887 22.1805 22.9881C22.1989 22.9881 22.2178 22.9837 22.2435 22.9803C22.2173 22.9446 22.1972 22.9173 22.1772 22.8906M18.4095 15.2464C19.0019 16.0294 19.5937 16.8112 20.1855 17.5931C20.7779 18.3761 21.3702 19.1585 21.9626 19.9409C22.5533 20.7217 23.1446 21.5019 23.7347 22.2826C24.3254 23.0645 24.9173 23.8447 25.5174 24.6393C25.4728 24.6421 25.4478 24.6449 25.4227 24.6449C23.6244 24.6449 21.8261 24.6449 20.0278 24.646C19.9765 24.646 19.9431 24.6321 19.9108 24.5897C19.0949 23.5214 18.278 22.4542 17.4616 21.3865C16.8575 20.5963 16.2528 19.8066 15.6482 19.017C15.6309 18.9947 15.6125 18.9729 15.5919 18.9473C15.5735 18.9668 15.5574 18.983 15.5423 18.9997C14.191 20.5433 12.8396 22.0864 11.4882 23.6301C11.2068 23.9516 10.9243 24.2726 10.644 24.5953C10.6116 24.6321 10.5787 24.646 10.5303 24.646C9.65981 24.6443 8.7888 24.6449 7.91835 24.6449H7.86151C7.85538 24.6371 7.85315 24.6349 7.85259 24.6326C7.85203 24.6304 7.85203 24.6265 7.85259 24.6254C9.99863 22.1706 12.1452 19.7163 14.2963 17.256C12.0271 14.2901 9.75901 11.3254 7.48034 8.34731C7.52381 8.34564 7.55334 8.34341 7.58232 8.34341C8.1602 8.34341 8.73809 8.34341 9.31598 8.34341C10.5726 8.34341 11.8298 8.34341 13.0859 8.34174C13.1583 8.34174 13.2024 8.36292 13.2464 8.42143C14.5197 10.1078 15.7953 11.7924 17.0704 13.4771C17.0876 13.4999 17.1055 13.5216 17.1272 13.5489C17.1506 13.5228 17.1701 13.5027 17.1885 13.4815C18.4167 12.0783 19.6449 10.6751 20.8732 9.27184C21.1273 8.9815 21.3819 8.69115 21.6349 8.3997C21.6678 8.3618 21.7007 8.3423 21.7536 8.3423C22.6241 8.34397 23.4951 8.34341 24.3656 8.34341C24.3862 8.34341 24.4068 8.34509 24.4257 8.3462C24.4285 8.35177 24.4296 8.354 24.4296 8.35623C24.4302 8.35846 24.4308 8.3618 24.4296 8.36348C24.4274 8.36793 24.4246 8.37295 24.4213 8.37685C22.4185 10.665 20.4156 12.9527 18.4078 15.247M32.5 16.493C32.5 7.65685 25.3363 0.493042 16.4997 0.493042C7.66312 0.493042 0.5 7.65685 0.5 16.493C0.5 25.3292 7.66312 32.493 16.4997 32.493C25.3363 32.493 32.4994 25.3298 32.4994 16.493"
+                  fill="var(--color-1, white)"
+                ></path>
+              </svg>
+            </div>
+            <div id="copyrightContainer">
+              <p id="copyright">©Flipped Energy 2024. All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
