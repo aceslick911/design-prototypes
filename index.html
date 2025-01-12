@@ -58,6 +58,7 @@
 
       #phoneContainer {
         display: flex;
+        flex-direction: row;
         align-items: center;
       }
 
@@ -100,30 +101,6 @@
         justify-content: flex-end;
         align-items: center;
         gap: 30px;
-      }
-
-      #aboutUsContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #homeContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #businessContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #contactUsContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       #aboutUsLink {
@@ -177,6 +154,7 @@
 
       #headerMain {
         padding-top: 30px;
+        align-self: center;
       }
 
       #headingDescription {
@@ -219,6 +197,7 @@
       #footerCurve {
         fill: #0f1533;
 
+        align-self: stretch;
         overflow: hidden;
       }
 
@@ -226,6 +205,7 @@
         background: #0f1533;
 
         display: flex;
+        align-self: stretch;
         padding: 0px 52px 103px 52px;
       }
 
@@ -239,43 +219,18 @@
         font-size: 16px;
       }
 
-      #footerRHContainer {
+      #footerLogoContainer {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-      }
-
-      #footerLogo {
-        display: flex;
-        justify-content: flex-end;
+        align-items: flex-end;
       }
 
       #socialContainer {
-        display: flex;
-        justify-content: flex-end;
         gap: 8px;
       }
 
-      #socialLinks {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      #facebook {
+      .social {
         fill: #fff;
-      }
-
-      #instagram {
-        fill: #fff;
-      }
-
-      #twitter {
-        fill: #fff;
-      }
-
-      #copyrightContainer {
-        display: flex;
-        justify-content: flex-end;
       }
 
       #copyright {
@@ -367,15 +322,15 @@
   </head>
 
   <body>
-    <div id="responsiveFlippedV9Page" cms-y cms-a-N cms-yhug>
-      <div id="testHeader" cms-x cms-a-N cms-xfill cms-yfill>
-        <div id="logoContainer" cms-y cms-a-W cms-xhug cms-yfill>
+    <div id="responsiveFlippedV9Page" class="cms-a-N cms-yhug">
+      <div id="testHeader" class="cms-a-N cms-xfill cms-yfill">
+        <div id="logoContainer" class="cms-a-C cms-xhug cms-yfill">
           <svg
             color1="#28D2CF"
             color2="#FFFFFF"
             class="DefaultheaderDefault-sc-9glh00-4 kpKJiN"
             width="170"
-            height="67"
+            height="102"
             viewBox="0 0 170 67"
             fill="var(--color-1, #28D2CF)"
           >
@@ -393,10 +348,10 @@
             ></path>
           </svg>
         </div>
-        <div id="navContainer" cms-y cms-a-E cms-xfill cms-yfill>
-          <div id="callToAction" cms-x cms-a-E cms-xhug>
-            <div id="phoneContainer" cms-x cms-a-W cms-yfill>
-              <div id="phoneLogo" cms-x cms-a-W>
+        <div id="navContainer" class="cms-y cms-a-E cms-xfill cms-yfill">
+          <div id="callToAction" class="cms-x cms-a-E cms-xhug">
+            <div id="phoneContainer" class="cms-x cms-a-W cms-yfill">
+              <div id="phoneLogo" class="cms-x cms-a-W">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
@@ -410,38 +365,46 @@
                   />
                 </svg>
               </div>
-              <p id="phoneNumber" cms-xhug cms-yhug>1300 110 100</p>
+              <p id="phoneNumber" class="cms-xhug cms-yhug">1300 110 100</p>
             </div>
-            <div id="accountLinks" cms-x cms-a-C cms-xhug cms-yfill>
-              <p id="accountDetails" cms-xhug cms-yhug>Login | My account</p>
+            <div id="accountLinks" class="cms-x cms-a-C cms-xhug cms-yfill">
+              <p id="accountDetails" class="cms-xhug cms-yhug">
+                Login | My account
+              </p>
             </div>
           </div>
-          <div id="navLinks" cms-x cms-a-E cms-xhug cms-yfill>
-            <div id="aboutUsContainer" cms-x cms-a-C cms-xhug cms-yfill>
-              <p id="aboutUsLink" cms-xhug cms-yhug>About us</p>
+          <div id="navLinks" class="cms-x cms-a-E cms-xhug cms-yfill">
+            <div id="aboutUsContainer" class="cms-x cms-a-C cms-xhug cms-yfill">
+              <p id="aboutUsLink" class="cms-xhug cms-yhug">About us</p>
             </div>
-            <div id="homeContainer" cms-x cms-a-C cms-xhug cms-yfill>
-              <p id="homeLink" cms-xhug cms-yhug>Home</p>
+            <div id="homeContainer" class="cms-x cms-a-C cms-xhug cms-yfill">
+              <p id="homeLink" class="cms-xhug cms-yhug">Home</p>
             </div>
-            <div id="businessContainer" cms-x cms-a-C cms-xhug cms-yfill>
-              <p id="businessLink" cms-xhug cms-yhug>Business</p>
+            <div
+              id="businessContainer"
+              class="cms-x cms-a-C cms-xhug cms-yfill"
+            >
+              <p id="businessLink" class="cms-xhug cms-yhug">Business</p>
             </div>
-            <div id="contactUsContainer" cms-x cms-a-C cms-xhug cms-yfill>
-              <p id="contactUsLink" cms-xhug cms-yhug>Contact us</p>
+            <div
+              id="contactUsContainer"
+              class="cms-x cms-a-C cms-xhug cms-yfill"
+            >
+              <p id="contactUsLink" class="cms-xhug cms-yhug">Contact us</p>
             </div>
           </div>
         </div>
       </div>
-      <div id="contentContainer" cms-y cms-a-N cms-xfill cms-yhug>
-        <div id="headerMain" cms-y cms-a-C cms-xfill cms-yhug>
-          <p id="headingDescription" cms-xfill cms-yhug>
+      <div id="contentContainer" class="cms-y cms-a-N cms-xfill cms-yhug">
+        <div id="headerMain" class="cms-y cms-a-C cms-xfill cms-yhug">
+          <p id="headingDescription" class="cms-xfill cms-yhug">
             About Flipped Energy Australia
           </p>
         </div>
-        <p id="companyHeading" cms-xfill cms-yhug>
+        <p id="companyHeading" class="cms-xfill cms-yhug">
           Flipped Energy Australia Pty Ltd
         </p>
-        <p id="flippedDiscription" cms-xfill cms-yhug>
+        <p id="flippedDiscription" class="cms-xfill cms-yhug">
           Filpped Energy Australia Pty Ltd is a retail energy provider that
           offers electricity services to residential and business customers in
           Australia. We are committed to providing our customers with affordable
@@ -452,16 +415,16 @@
           sustainability and are committed to supporting the transition to a
           clean energy future.
         </p>
-        <p id="contactDirection" cms-xfill cms-yhug>
+        <p id="contactDirection" class="cms-xfill cms-yhug">
           If you have any questions or concerns please reach out by email to:
         </p>
-        <div id="contactContainer" cms-y cms-a-W cms-xfill cms-yhug>
+        <div id="contactContainer" class="cms-y cms-a-W cms-xfill cms-yhug">
           <p id="emailContact">
             <img src="./assets/emailContactFinal.png" alt="email contact" />
           </p>
         </div>
       </div>
-      <div id="footerCurve" cms-xfill>
+      <div id="footerCurve" class="cms-xfill">
         <svg
           class="Curve-sc-9glh00-31 FooterSVG-sc-1flc828-0 iEqWth jucxqW"
           width="auto"
@@ -475,20 +438,22 @@
           ></path>
         </svg>
       </div>
-      <div id="footerContainer" cms-x cms-a-S cms-xfill>
-        <div id="footerNav" cms-y cms-a-NW cms-xfill cms-yfill>
-          <div id="faq" cms-xfill cms-yfill>FAQ</div>
-          <div id="privacy" cms-xfill cms-yfill>Privacy</div>
-          <div id="contactUs" cms-xfill cms-yfill>Contact us</div>
-          <div id="complaints" cms-xfill cms-yfill>Complaints</div>
-          <div id="career" cms-xfill cms-yfill>Careers</div>
-          <div id="press" cms-xfill cms-yfill>Press</div>
-          <div id="legal" cms-xfill cms-yfill>Legal</div>
-          <div id="accessibility" cms-xfill cms-yfill>Accessibility</div>
+      <div id="footerContainer" class="cms-x cms-a-S cms-xfill cms-yfill">
+        <div id="footerNav" class="cms-y cms-a-NW cms-xfill cms-yfill">
+          <div id="faq" class="cms-xfill cms-yfill">FAQ</div>
+          <div id="privacy" class="cms-xfill cms-yfill">Privacy</div>
+          <div id="contactUs" class="cms-xfill cms-yfill">Contact us</div>
+          <div id="complaints" class="cms-xfill cms-yfill">Complaints</div>
+          <div id="career" class="cms-xfill cms-yfill">Careers</div>
+          <div id="press" class="cms-xfill cms-yfill">Press</div>
+          <div id="legal" class="cms-xfill cms-yfill">Legal</div>
+          <div id="accessibility" class="cms-xfill cms-yfill">
+            Accessibility
+          </div>
         </div>
-        <div id="footerRHContainer" cms-y cms-a-SE cms-xfill>
-          <div id="footerLogoContainer" cms-y cms-a-E cms-yfill>
-            <div id="footerLogo" cms-x cms-a-E cms-xfill>
+        <div id="footerRHContainer" class="cms-y cms-a-SE cms-xfill">
+          <div id="footerLogoContainer" class="cms-y cms-a-E cms-yfill">
+            <div id="footerLogo" class="cms-x cms-a-E cms-xfill">
               <svg
                 color1="#28D2CF"
                 color2="#FFFFFF"
@@ -512,9 +477,13 @@
                 ></path>
               </svg>
             </div>
-            <div id="socialContainer" cms-x cms-a-E cms-xill>
-              <div id="socialLinks" cms-x cms-a-E cms-xhug cms-yfill></div>
+            <div id="socialContainer" class="cms-x cms-a-E cms-xill">
+              <div
+                id="socialLinks"
+                class="cms-x cms-a-E cms-xhug cms-yfill"
+              ></div>
               <svg
+                class="social"
                 id="facebook"
                 class="FB-sc-9glh00-27 fAvnnJ"
                 width="33"
@@ -528,6 +497,7 @@
                 ></path>
               </svg>
               <svg
+                class="social"
                 id="instagram"
                 class="INST-sc-9glh00-28 faAYji"
                 width="33"
@@ -541,6 +511,7 @@
                 ></path>
               </svg>
               <svg
+                class="social"
                 id="twitter"
                 class="X-sc-9glh00-29 iPkkon"
                 width="33"
@@ -554,8 +525,8 @@
                 ></path>
               </svg>
             </div>
-            <div id="copyrightContainer" cms-x cms-a-E cms-xfill>
-              <p id="copyright" cms-xfill cms-yfill>
+            <div id="copyrightContainer" class="cms-x cms-a-E cms-xfill">
+              <p id="copyright" class="cms-xfill cms-yfill">
                 ©Flipped Energy 2024. All rights reserved
               </p>
             </div>
