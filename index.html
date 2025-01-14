@@ -194,15 +194,26 @@
         line-height: auto;
       }
 
+      #curveContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        width: 100%;
+        height: 170px;
+
+        margin-top: -8px;
+        margin-right: -7px;
+      }
+
       #footerCurve {
         fill: #0f1533;
-
-        align-self: stretch;
         overflow: hidden;
       }
 
       #footerContainer {
         background: #0f1533;
+        margin-top: -5px;
 
         display: flex;
         align-self: stretch;
@@ -217,6 +228,13 @@
 
         font-family: Poppins;
         font-size: 16px;
+      }
+
+      #footerRHContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: flex-end;
       }
 
       #footerLogoContainer {
@@ -239,7 +257,7 @@
         font-size: 14px;
       }
 
-      .cms-y {
+      /* .cms-y {
         display: flex;
         flex-direction: column;
       }
@@ -317,7 +335,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-      }
+      } */
     </style>
   </head>
 
@@ -424,19 +442,21 @@
           </p>
         </div>
       </div>
-      <div id="footerCurve" class="cms-xfill">
-        <svg
-          class="Curve-sc-9glh00-31 FooterSVG-sc-1flc828-0 iEqWth jucxqW"
-          width="auto"
-          height="auto"
-          viewBox="0 0 1953 170"
-          fill="var(--color-1, #0F1533)"
-        >
-          <path
-            d="M1952.64 43.8378C1148.9 -66.1405 314.186 60.64 0 137.778V169.854H1952.64V43.8378Z"
+      <div id="curveContainer">
+        <div id="footerCurve" class="cms-xfill">
+          <svg
+            class="Curve-sc-9glh00-31 FooterSVG-sc-1flc828-0 iEqWth jucxqW"
+            width="auto"
+            height="auto"
+            viewBox="0 0 1953 170"
             fill="var(--color-1, #0F1533)"
-          ></path>
-        </svg>
+          >
+            <path
+              d="M1952.64 43.8378C1148.9 -66.1405 314.186 60.64 0 137.778V169.854H1952.64V43.8378Z"
+              fill="var(--color-1, #0F1533)"
+            ></path>
+          </svg>
+        </div>
       </div>
       <div id="footerContainer" class="cms-x cms-a-S cms-xfill cms-yfill">
         <div id="footerNav" class="cms-y cms-a-NW cms-xfill cms-yfill">
