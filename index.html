@@ -18,19 +18,24 @@
       }
 
       body {
+        display: flex; /* make the body a flex container */
         background-color: #0f1533;
       }
 
       #responsiveFlippedV9Page {
-        background: #fff;
+        background-color: white;
+
+        display: flex; /* make the page container a flex container */
+        flex-direction: column;
+        align-items: center;
       }
 
       #testHeader {
         background: #0f1533;
 
         display: flex;
-        height: auto;
         padding: 0px 91.5px;
+        justify-content: center;
         align-items: stretch;
         align-self: stretch;
       }
@@ -38,6 +43,7 @@
       #logoContainer {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: flex-start;
       }
 
@@ -58,7 +64,6 @@
 
       #phoneContainer {
         display: flex;
-        flex-direction: row;
         align-items: center;
       }
 
@@ -99,7 +104,7 @@
       #navLinks {
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        align-content: baseline;
         gap: 30px;
       }
 
@@ -147,12 +152,15 @@
         background: #fff;
 
         display: flex;
+        word-wrap: normal;
+
         padding: 0px 171.5px 200px 50px;
         flex-direction: column;
         gap: 20px;
       }
 
       #headerMain {
+        display: flex;
         padding-top: 30px;
         align-self: center;
       }
@@ -164,7 +172,6 @@
         font-size: 50px;
         font-style: normal;
         font-weight: 700;
-        line-height: auto;
       }
 
       #companyHeading {
@@ -173,7 +180,6 @@
         font-size: 21px;
         font-style: normal;
         font-weight: 400;
-        line-height: auto;
       }
 
       #flippedDiscription {
@@ -182,7 +188,12 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: auto;
+      }
+
+      #contactContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
       }
 
       #contactDirection {
@@ -191,24 +202,24 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: auto;
       }
 
       #curveContainer {
+        background-color: white;
+
         display: flex;
-        overflow: hidden; /* Ensure overflow is hidden */
-        width: 100%;
+        justify-content: center; /*put some work into thus and the footerCurve container*/
+        align-items: stretch;
+        overflow: hidden;
+        width: 100vw;
         height: 170px;
         margin-top: -8px;
-        position: relative; /* Add relative positioning */
       }
 
       #footerCurve {
+        display: flex;
         fill: #0f1533;
-        margin: 0 auto; /* Center the footerCurve */
-        position: absolute; /* Add absolute positioning */
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
       }
 
       #footerContainer {
